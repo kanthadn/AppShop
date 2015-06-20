@@ -1,0 +1,44 @@
+{
+"category" : [
+    {
+        "name" : "Fruits & Vegitables",
+        "url" : "fv",
+        "icon" : "fv"
+    },
+    {
+        "name" : "Grocery & staples",
+        "url" : "GS",
+        "icon" : "GS"
+    },
+    
+    {
+        "name" : "Bread Dairy & Eggs",
+        "url" : "BDE",
+        "icon" : "BDE"
+    },
+    {
+        "name" : "Beverages",\
+        "url" : "bevg",
+        "icon" : "bevag"
+    },
+    {
+        "name" : "Branded Food",
+        "icon" : "Bfood",
+        "url" : "Bfood"
+    },
+    {
+        "name" : "Household",
+        "icon" : "Household",
+        "url" : "Household"
+    },
+    {
+        "name" : "Imported & Gournemet",
+        "icon" : "ig",
+        "url" : "IG"
+    },
+    {
+        "name" : "Meat",
+        "icon" : "fv",
+        "url" : "meat",
+    }]
+}

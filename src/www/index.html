@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+        
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/index.js"></script>
+    <script>
+    app.initialize();
+    </script>
+</head>
+<body>
+    <div>Maion Header</div>
+<div data-role="page" id="mainPage" data-theme="a">
+    <div data-role="header" data-theme="b" data-position="fixed" data-fullscreen="true"><a href="#leftPanel" class="ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-left ui-btn-icon-notext" >GB</a><h1>greenBasket</h1></div>
+    <!-- leftpanel  -->
+    <div data-role="panel" id="leftPanel" data-position="left" data-display="push" data-dismissible="true" data-theme="b">
+        <div class="panel-content">
+            <h3>CATEGORY</h3>
+            <ul data-role="listview" id="catrgoryList"></ul>
+        </div><!-- /content wrapper for padding -->
+    </div><!-- /leftpanel1 -->
+    <div data-role="content">
+        <br /><br /><br />
+        <a href="#popupLogin" data-rel="popup" data-position-to="window" data-role="button" data-transition="flow">Login</a>
+        <br />
+        <a href="moreInfo" data-role="button">More Info</a>
+        <br /><br /><br /><br /><br />
+        <div data-role="popup" id="popupMenu" data-theme="b">
+            <div data-role="popup" id="popupLogin" data-theme="b">
+                <div data-role="fieldcontain">
+                    <div style="padding:10px 20px;">
+                        <h3>Please sign in</h3>
+                            <input class="inputBox" type="text" id="loginUsername" value="" placeholder="Username">
+                            <input class="inputBox" type="password" id="loginPassword" value="" placeholder="Password">
+                            <br />
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">
+                                    <input type="checkbox" data-mini="true" id="rememberMeCheckbox" name="rememberMeCheckbox">
+                                    <label for="rememberMeCheckbox">Remember<br /> Me</label></div>
+                                <div class="ui-block-b"><a href="#" onclick="login()" data-role="button" data-mini="true">Login</a>
+                                </div></div>
+                            </div><!-- /grid-a -->
+                    </div>
+                </div>
+            </div>
+        </div>
+</div><!-- /page -->
+</body>
+</html>
