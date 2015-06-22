@@ -77,6 +77,24 @@ h1 {
     padding:0px;
     text-align:center;
 }
+#catrgoryList li a {
+    text-decoration: none;
+    color : chocolate;
+    font-size: 14px;    
+}
+
+#catrgoryList li  {
+    padding-left: 10px;
+    border-bottom: 1px solid;
+    list-style: none;
+    line-height: 2;
+    
+}
+
+#catrgoryList{
+    text-align: left;
+    padding : 0px;
+}
 
 .event {
     border-radius:4px;

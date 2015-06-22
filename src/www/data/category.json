@@ -17,7 +17,7 @@
         "icon" : "BDE"
     },
     {
-        "name" : "Beverages",\
+        "name" : "Beverages",
         "url" : "bevg",
         "icon" : "bevag"
     },
@@ -39,6 +39,6 @@
     {
         "name" : "Meat",
         "icon" : "fv",
-        "url" : "meat",
+        "url" : "meat"
     }]
 }

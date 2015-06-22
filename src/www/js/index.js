@@ -19,26 +19,42 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        this.bindEvents();
+        console.log("init");
+        var self = this
+        $(function() {
+            self.bindEvents();
+                     });
     },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-        $.getJSON('../data/category.json',function(data){
-            console.log(JSON.parse(data));
-            data = JSON.parse(data);
-              var items = [];
-            $.each( data.category, function( key, val ) {
-                console.log(key);
-                items.push( "<li id='" + val.id + "'><a href ='#' id='"+val.id+"' >" + val.name + "</a></li>" );
-            });
+        var myUrl = "http://192.168.1.5:3000/";
+        $.getJSON( myUrl+'data/category.json', function(data) {
+          console.log("cat success");
+            var items = [];
+              $.each( data.category, function( key, val ) {
+                items.push( "<li id='" + val.url + "'> <a href='#' >" + val.name + "<a/></li>" );
+              });
             $('#catrgoryList').append(items);
-        }).done(function(jsonVal){
-            console.log("complete",jsonVal);
-        });;
+        })
+          .done(function() {
+            console.log( "second success" );
+          })
+          .fail(function(a,b) {
+            alert("Categorys error");
+          })
+          .always(function() {
+            console.log( "complete" );
+          });
+                var carousel;
+        $(".carousel").itemslide(
+            {
+                disable_slide: true,
+                duration: 1500
+            }
+        );        
         $( document ).on( "swipeleft swiperight", "#mainPage", function( e ) {
         if ( e.type === "swiperight" ) {
                 $( "#leftPanel" ).panel( "open" );

@@ -4,26 +4,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <link rel="stylesheet" type="text/css" href="css/index.css" />
-        
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/jqueryMobile.js"></script>
+<script src="js/vendor/itemSlide.js"></script>
 <script src="js/index.js"></script>
-    <script>
-    app.initialize();
-    </script>
 </head>
 <body>
-    <div>Maion Header</div>
 <div data-role="page" id="mainPage" data-theme="a">
     <div data-role="header" data-theme="b" data-position="fixed" data-fullscreen="true"><a href="#leftPanel" class="ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-left ui-btn-icon-notext" >GB</a><h1>greenBasket</h1></div>
     <!-- leftpanel  -->
-    <div data-role="panel" id="leftPanel" data-position="left" data-display="push" data-dismissible="true" data-theme="b">
+    <div data-role="panel" id="leftPanel" data-position="left" data-display="push" data-dismissible="true" data-theme="a">
         <div class="panel-content">
             <h3>CATEGORY</h3>
-            <ul data-role="listview" id="catrgoryList"></ul>
+            <ul data-role="" id="catrgoryList" data-inset="true" data-mini="true" ></ul>
         </div><!-- /content wrapper for padding -->
     </div><!-- /leftpanel1 -->
     <div data-role="content">
+        <ul class="carousel">
+            <li>
+                <img src="www/img/logo.png"></img>
+            </li>
+            <li>
+                Slide #2
+            </li>
+        </ul>
+
         <br /><br /><br />
         <a href="#popupLogin" data-rel="popup" data-position-to="window" data-role="button" data-transition="flow">Login</a>
         <br />
@@ -49,5 +54,9 @@
             </div>
         </div>
 </div><!-- /page -->
+        <script>
+        console.log("From main");
+    app.initialize();
+    </script>
 </body>
 </html>
