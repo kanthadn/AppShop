@@ -1,5 +1,5 @@
 # AppShopPolo
-For leraning purpose
+For learning purpose
 To learn a phone gap+jquery mobile for mobile application.
 
 UI-
